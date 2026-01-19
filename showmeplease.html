@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔒 Security Header Checker</h1>
+
+        <div id="url-display" class="url-box">
+            <span id="current-url">Loading...</span> <!-- done displaying current URL -->
+
+
+        </div>
+
+        <button id="check-btn">Analyze Headers</button>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing security headers...</p>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Security Analysis</h2>
+
+            <div class="score-container">
+                <div id="score-display" class="score">
+                    <span id="score-value">0</span>
+                    <span class="score-label">/100</span>
+                </div>
+                <div id="score-text" class="score-description">Not Secure</div>
+            </div>
+
+            <div id="headers-list" class="headers-list"></div>
+
+            <div class="info-box">
+                <p><strong>Tip:</strong> Missing headers can expose your site to XSS, clickjacking, and other attacks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="cyber-extension.js"></script>
+</body>
+
+</html>
